@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<link rel="stylesheet" href="{% static 'css/estilogaleria.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+	<title>Galeria E-Comerce</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">
+			E-Comerce
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="/index">Inicio <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/galeria" target="_self">Galeria</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/login" target="_self">login</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/mantenedor" target="_self">Mantenedor</a>
+			  </li>
+			  </li>
+			  
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+			  <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+			</form>
+		  </div>
+		</nav>
+	
+	<div class="ContenedorIndex">
+		<header>
+			<div class="logo">
+				<h1>GALERIA</h1>
+				<p>E-Comerce</p>
+			</div>
+			<form action="">
+				<input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+			</form>
+			<div class="categorias" id="categorias">
+				<a href="#" class="activo">Todos</a>
+				<a href="#">Almacenamiento</a>
+				<a href="#">Placa Madre</a>
+				<a href="#">Memorias Ram</a>
+				<a href="#">Tarjetas de Video</a>
+			</div>
+		</header>
+
+		<section class="grid" id="grid">
+			<div class="item" 
+				 data-categoria="almacenamiento"
+				 data-etiquetas="disco duro ssd"
+				 data-descripcion="1.Disco Duro 1TB Sata3 7200 rpm 64MB Barracuda,            
+				 Precio: $43.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/discoduroseagate1tbbarracuda.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="placa madre"
+				 data-etiquetas="placa madre mother board msi asus aorus"
+				 data-descripcion="M/B Intel B365M DS3H (1151-v2) Admite procesadores Intel® Core ™ de novena y octava generación,
+				 DDR4 sin búfer no ECC de doble canal,
+				 Nuevo diseño híbrido digital PWM,
+				 Capacitadores de audio de alta calidad y con protección de ruido,
+
+				 Precio: $76.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/Gigabytembintelb365m.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="memorias ram"
+				 data-etiquetas="ram ddr4 memoria"
+				 data-descripcion="Memoria DDR4 2400 MHz UDIMM de G.Skill,
+				 Precio: $23.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/ddr44gb.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="tarjetas de video"
+				 data-etiquetas="video asus nvidia gtx amd radeon"
+				 data-descripcion="Asus Video NVIDIA GeForce GTX1650S O4GB Phoenix,OpenGL®4.6,GDDR6 4GBOC Mode - 1770 MHz (Boost Clock)
+				 Gaming Mode (Default) - GPU Boost Clock : 1740 MHz , GPU Base Clock : 1530 MHz,
+				 Precio: $255.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/asusnvidia1650.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="tarjetas de video"
+				 data-etiquetas="video asus nvidia gtx amd radeon"
+				 data-descripcion="MSI Video NVIDIA GeForce RTX2060S 8GB Ventus GP OC,Memoria: 8GB GDDR6
+				 Motor de gráficos: GeForce® RTX 2060 SUPERTM VENTUS GP OC
+				 Norma bus: 256 bits
+				 Interfaz de memoria: PCI Express x16 3.0,
+				 Precio: $500.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/nvidiamsi2060 super.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="placa madre"
+				 data-etiquetas="placa madre mother board msi asus aorus"
+				 data-descripcion="ASUS M/B AMD X570-P Prime (AM4),
+				 Procesadores AMD Ryzen ™ de 3.a generación
+				 4 x DIMM, máx. 128 GB, DDR4 4400 (OC) / 4266 (OC) / 4133 (OC) / 4000 (OC) / 3866 (OC) / 3733 (OC) / 3600 (OC) / 3466 (OC) / 3400 (OC) / 3200 / 3000/2933/2800/2666/2400/2133 MHz Memoria sin búfer Procesadores,
+				 Precio: $175.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/Asusmbamdx570p.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item"
+				 data-categoria="memorias ram"
+				 data-etiquetas="ram ddr4 memoria"
+				 data-descripcion="Kingston DDR4 8GB 3000MHz HyperX FURY (Black),
+				 Precio: $49.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/ddr48gb.jpg' %}" alt="">
+				</div>
+			</div>
+
+			<div class="item" 
+				 data-categoria="almacenamiento"
+				 data-etiquetas="disco duro ssd"
+				 data-descripcion="Cruacial Unidad SSD 480GB Sata3 2.5 BX500,
+				 Precio: $58.000 CLP
+				 Stock: +100"
+			>
+				<div class="item-contenido">
+					<img src="{% static 'img/ssdcrucial480gb.jpg' %}" alt="">
+				</div>
+			</div>
+
+		</section>
+
+		<section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
+
+		<footer class="contenedor">
+			<div class="redes-sociales">
+				<div class="contenedor-icono">
+					<a href="http://www.twitter.com" target="_blank" class="twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="http://www.facebook.com" target="_blank" class="facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="https://www.instagram.com/p/Bwmz1KXllvy/" target="_blank" class="instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+				<div class="contenedor-icono">
+					<a href="index.html" target="_self" class="Volver">
+						<i class="fas fa-undo"></i>
+					</a>
+				</div>
+			</div>
+
+		</footer>
+	</div>
+
+	<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
